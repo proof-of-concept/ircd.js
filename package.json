@@ -21,6 +21,7 @@
     "carrier": ">= 0.0.3",
     "bcrypt": ">= 0.4.0",
     "winston": "0.6.1",
+    "base58-native": "*",
     "commander": "git://github.com/visionmedia/commander.js.git"
   },
   "devDependencies": {
