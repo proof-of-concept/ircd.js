@@ -1,25 +1,30 @@
-{ "network":  "ircn",
+{ "network":  "nircd",
   "hostname": "localhost",
-  "serverDescription": "A Node IRC daemon",
-  "serverName": "server1",
+  "serverDescription": "An ircd in node.js",
+  "serverName": "nicrd1",
   "port": 6667,
   "linkPort": 7777,
-  "motd": "Message of the day",
+  "motd": "Welcome",
   "whoWasLimit": 10000,
   "token": 1,
   "opers": {
-    "alex": { "password": "$2a$10$T1UJYlinVUGHqfInKSZQz./CHrYIVVqbDO3N1fRNEUvFvSEcshNdC" }
+    "test": { "password": "$2a$12$7d.Kngam2NtJ/UnhvHxepu.z201S5h6k46ZBc3kbS3XNsAyTabqMm" }
   },
+  "operchannel": "#oper",
   "channels": {
-    "channel1": { "topic": "First Channel" },
-    "channel2": { "topic": "Second Channel" }
+    "#nircd": { "topic": "Lobby" }
   },
   "links": {
-    "server2": { "host": "127.0.0.1",
-                 "password": "$2a$10$T1UJYlinVUGHqfInKSZQz./CHrYIVVqbDO3N1fRNEUvFvSEcshNdC",
-                 "port": 7778,
-                 "token": 2 }
+    "nicrd2": { "host": "127.0.0.1",
+                "password": "$2a$12$7d.Kngam2NtJ/UnhvHxepu.z201S5h6k46ZBc3kbS3XNsAyTabqMm",
+                "port": 7778,
+                "token": 2 }
   },
   "pingTimeout": 120,
-  "maxNickLength": 30
+  "maxNickLength": 16,
+  "service": {
+    "nick": "X",
+    "hostname": "service"
+  },
+  "debug": true
 }
