@@ -1,7 +1,7 @@
 { "network":  "nircd",
-  "hostname": "localhost",
+  "hostname": "irc.example.com",
   "serverDescription": "An ircd in node.js",
-  "serverName": "nicrd1",
+  "serverName": "main.example.com",
   "port": 6667,
   "linkPort": 7777,
   "motd": "Welcome",
@@ -24,7 +24,7 @@
   "maxNickLength": 16,
   "service": {
     "nick": "X",
-    "hostname": "service"
+    "hostname": "service.example.com"
   },
   "debug": true
 }
