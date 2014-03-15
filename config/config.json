@@ -12,7 +12,7 @@
   },
   "operchannel": "#oper",
   "channels": {
-    "#nircd": { "topic": "Lobby" }
+    "nircd": { "topic": "Lobby" }
   },
   "links": {
     "nicrd2": { "host": "127.0.0.1",
