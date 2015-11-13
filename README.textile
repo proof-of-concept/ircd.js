@@ -1,18 +1,25 @@
-<pre>
- ::::::::::..     .,-::::::::::::-.         ....:::::: .::::::. 
- ;;;;;;;``;;;;  ,;;;'````' ;;,   `';,    ;;;;;;;;;````;;;`    ` 
- [[[ [[[,/[[['  [[[        `[[     [[    ''`  `[[.    '[==/[[[[,
- $$$ $$$$$$c    $$$         $$,    $$   ,,,    `$$      '''    $
- 888 888b "88bo,`88bo,__,o, 888_,o8P'd8b888boood88     88b    dP
- MMM MMMM   "W"   "YUMMMMMP"MMMMP"`  YMP"MMMMMMMM"      "YMmMY" 
-
-                                            A Node.JS IRC Server
- ircd.js
-</pre>
-
 h3. About
 
-I'm implementing "RFC 1459":https://tools.ietf.org/html/rfc1459 / "RFC 2812":https://tools.ietf.org/html/rfc2812 for "Node.js":http://nodejs.org/.
+Further implementation building up on https://github.com/alexyoung/ircd.js but enhancing the features. This might not always comply to "RFC 1459":https://tools.ietf.org/html/rfc1459 / "RFC 2812":https://tools.ietf.org/html/rfc2812 for "Node.js":http://nodejs.org/.
+
+Enhanced features:
+
+* Channel mode +d
+  delayed join: As long as the channel mode +d is set on a channel any new join will not be shown. Removing this channel mode will cause all hidden users to appear.
+* User mode +x
+  masked: To mask a host and maintain anonymity a user is free to use usermode +x. Once usermode +x is applied it cannot be removed.
+* Bitcoin address
+  Upon join a user can provide his bitcoin address as server password. It will be verified (syntax and validity of the address itself) and added to the users whois information.
+* Oper command /kill <user>
+  An oper can force an instant disconnect on a client by user /kill <username>
+* Oper overrides
+  To allow management of channels an oper has more rights even the rights are not displayed in a channel. For example an oper can op himself in a foreign channel.
+* Oper channel #oper (see config.json)
+  There should always be a place where no one else can be. E.g. for a irc network management. Only opers are allowed to join this channel.
+* Simple Service X (see config.json)
+  For debugging and kind of maintaining the service X posts the debug messages in the channel #oper if the debug flag is set to true (see config.json). The service is supposed to be an almighty service that cannot be kicked, killed or harmed in any other way.
+
+---
 
 The server will allow clients to connect, join channels, change topics; basic stuff.
 
@@ -63,15 +70,7 @@ Set up configuration in <code>/etc/ircdjs/config.json</code>.
 
 h3. Contributions
 
-* overra
-* jazzychad (Chad Etzel)
-* sespindola (Sebastian A. Espindola)
-* niklasf
-* treeform
-* guybrush (Patrick Pfeiffer)
-* eirikb (Eirik Brandtzæg)
-* andrew12 (Andrew Herbig)
-* jrasanen (Jussi Räsänen)
+* see https://github.com/alexyoung/ircd.js
 
 h3. License (GPL)
 
