@@ -1,10 +1,10 @@
-{ "network":  "nircd",
-  "hostname": "irc.example.com",
-  "serverDescription": "An ircd in node.js",
-  "serverName": "main.example.com",
+{ "network":  "ircn",
+  "hostname": "localhost",
+  "serverDescription": "A Node IRC daemon",
+  "serverName": "server1",
   "port": 6667,
   "linkPort": 7777,
-  "motd": "Welcome",
+  "motd": "Message of the day",
   "whoWasLimit": 10000,
   "token": 1,
   "opers": {
@@ -12,19 +12,22 @@
   },
   "operchannel": "#oper",
   "channels": {
-    "nircd": { "topic": "Lobby" }
+    "channel1": { "topic": "First Channel" },
+    "channel2": { "topic": "Second Channel" },
+    "!channel3": { "topic": "Third channel" },
+    "+channel4": { "topic": "Fourth Channel" }
   },
   "links": {
-    "nicrd2": { "host": "127.0.0.1",
-                "password": "$2a$12$7d.Kngam2NtJ/UnhvHxepu.z201S5h6k46ZBc3kbS3XNsAyTabqMm",
-                "port": 7778,
-                "token": 2 }
+    "server2": { "host": "127.0.0.1",
+                 "password": "$2a$10$T1UJYlinVUGHqfInKSZQz./CHrYIVVqbDO3N1fRNEUvFvSEcshNdC",
+                 "port": 7778,
+                 "token": 2 }
   },
   "pingTimeout": 120,
-  "maxNickLength": 16,
   "service": {
     "nick": "X",
     "hostname": "service.example.com"
   },
   "debug": true
+  "maxNickLength": 30
 }
