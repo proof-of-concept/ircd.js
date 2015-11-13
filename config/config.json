@@ -28,6 +28,6 @@
     "nick": "X",
     "hostname": "service.example.com"
   },
-  "debug": true
+  "debug": true,
   "maxNickLength": 30
 }
