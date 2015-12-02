@@ -12,10 +12,10 @@
   },
   "operchannel": "#oper",
   "channels": {
-    "channel1": { "topic": "First Channel" },
-    "channel2": { "topic": "Second Channel" },
-    "!channel3": { "topic": "Third channel" },
-    "+channel4": { "topic": "Fourth Channel" }
+    "lobby": { "topic": "Lobby" }
+  },
+  "forbidden": {
+    ".*warez.*": { "reason": "Warez is illegal." }
   },
   "links": {
     "server2": { "host": "127.0.0.1",

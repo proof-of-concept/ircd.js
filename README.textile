@@ -6,10 +6,16 @@ Enhanced features:
 
 * Channel mode +d
   delayed join: As long as the channel mode +d is set on a channel any new join will not be shown. Removing this channel mode will cause all hidden users to appear.
+* Channel mode +a
+  automatic delayed join: After the 20th user the server automatically sets +d on the channel to prevent flooding
 * User mode +x
   masked: To mask a host and maintain anonymity a user is free to use usermode +x. Once usermode +x is applied it cannot be removed.
 * Bitcoin address
   Upon join a user can provide his bitcoin address as server password. It will be verified (syntax and validity of the address itself) and added to the users whois information.
+* Forbidden channels (see config.json)
+  Disallows joining forbidden channel (e.g. Anti-Warez)
+* Oper command /broadcast <message>
+  Sends a message to all connected users
 * Oper command /kill <user>
   An oper can force an instant disconnect on a client by user /kill <username>
 * Oper overrides
